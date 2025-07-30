@@ -6,11 +6,23 @@ class Creatory < Formula
   license "MIT"
 
   def install
-    chmod "+x", "creatory"
+    # The archive extracts to creatory-cli-#{version}/
+    # Homebrew automatically changes to this directory
     bin.install "creatory"
   end
 
+  def post_install
+    # Ensure execute permissions are set after installation
+    chmod 0755, bin/"creatory"
+  end
+
   test do
-    system "#{bin}/creatory"
+    # Test that the binary exists and is executable
+    assert_predicate bin/"creatory", :exist?
+    assert_predicate bin/"creatory", :executable?
+    
+    # Test that it can run and shows help
+    output = shell_output("#{bin}/creatory --help")
+    assert_match "creatory", output.downcase
   end
 end
