@@ -6,10 +6,8 @@ class Creatory < Formula
   license "MIT"
 
   def install
-    cd "creatory-cli-0.1" do
-      chmod "+x", "creatory"
-      bin.install "creatory"
-    end
+    chmod "+x", "creatory"
+    bin.install "creatory"
   end
 
   test do
