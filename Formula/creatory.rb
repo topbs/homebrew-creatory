@@ -6,6 +6,7 @@ class Creatory < Formula
   license "MIT"
 
   def install
+    chmod "+x", "creatory"
     bin.install "creatory"
   end
 
