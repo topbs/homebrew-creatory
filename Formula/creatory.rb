@@ -1,8 +1,8 @@
 class Creatory < Formula
   desc "CLI from Creatory Studio"
   homepage "https://github.com/topbs/creatory-cli"
-  url "https://github.com/topbs/creatory-cli/archive/refs/tags/v0.1.tar.gz"
-  sha256 "362ee7145e11513dd21881bf8337aa75106eacaba56fe90a67cd780d3373912b"
+  url "https://github.com/topbs/creatory-cli/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "f784c8d82b6a91a145fc72e4debca1a513283e6fe02892d914062f8293431ff9"
   license "MIT"
 
   def install
